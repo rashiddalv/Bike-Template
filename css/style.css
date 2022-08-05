@@ -1,0 +1,547 @@
+:root {
+  --width: 350px;
+  --height: 50px;
+  --primary: #17b87c;
+  --body: #f1f3f6;
+  --white: #ffffff;
+  --black: #000000;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+}
+
+.rHeader {
+  max-width: 100%;
+  height: 100vh;
+  background-image: url(../img/hero.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.rNav {
+  padding: 0 15px;
+  width: 650px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  justify-content: space-between;
+}
+
+.rNav a,
+.rNav p {
+  font-family: "Lato";
+  text-decoration: none;
+  color: #4d4959;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.6px;
+  line-height: normal;
+  transition: 0.2s;
+}
+.rNav a:hover {
+  color: #64c29e;
+}
+
+.rMain {
+  width: 100%;
+  min-height: 469px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rmain-container {
+  padding: 0 38px;
+  width: 1110px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.rmain-container img {
+  width: 52px;
+  height: 43px;
+}
+.rmain-container h1 {
+  color: #353738;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 3.6px;
+}
+.rmain-container p {
+  color: #848789;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 34px;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+.company-img {
+  height: 600px;
+  background-color: #282f35;
+  background-image: url(../img/Layer_10.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.company-img img {
+  margin: 0 auto;
+}
+.vintage-img {
+  height: 600px;
+  background-color: #282f35;
+  background-image: url(../img/Layer_12.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.vintage-img img {
+  margin: 0 auto;
+}
+.company-info {
+  height: 600px;
+}
+
+.info-title {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 68px;
+}
+.info-title h1 {
+  color: #353738;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  /* Text style for "vintage Ol" */
+  font-style: normal;
+  letter-spacing: 3.6px;
+}
+
+.info-title p {
+  color: #848789;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 30px;
+  text-align: justifyLeft;
+  /* Text style for "L, orem Ip" */
+  font-style: normal;
+  letter-spacing: normal;
+}
+.info_img {
+  background-color: #282f35;
+
+  height: 200px;
+  background-image: url(../img/Layer_11.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.vin_img {
+  background-color: #282f35;
+
+  height: 200px;
+  background-image: url(../img/Layer_13.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.retro-left {
+  width: 100%;
+  background-color: #282f35;
+  background-image: url(../img/Layer_15.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.retro-right {
+  width: 100%;
+  background-color: #282f35;
+  background-image: url(../img/Layer_14.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.retro-layer {
+  opacity: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #64c29ecb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.retro-layer:hover {
+  opacity: 1;
+}
+.retro-layer img {
+  transition: all 0.3s;
+  position: relative;
+  scale: 0.4;
+}
+.retro-layer::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  scale: 0.4;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.retro-layer:hover:before {
+  scale: 1;
+  opacity: 1;
+  margin-left: 120px;
+}
+.retro-layer:hover img {
+  scale: 1.2;
+  margin-right: 30px;
+}
+.retro-middle {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 38px;
+}
+.retro-middle h1 {
+  color: #353738;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  /* Text style for "retrò Bike" */
+  font-style: normal;
+  letter-spacing: 3.6px;
+}
+.retro-middle p {
+  color: #848789;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 29.99px;
+  /* Text style for "L, orem Ip" */
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+.twitter {
+  padding: 0 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 470px;
+}
+.twitter h3 {
+  color: #353738;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Lato";
+  font-style: normal;
+  letter-spacing: 1.8px;
+  line-height: normal;
+}
+.twitter p {
+  color: #848789;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: normal;
+  line-height: 34px;
+  text-align: center;
+}
+.twitter h3 span {
+  color: #848789;
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 1.8px;
+  line-height: normal;
+}
+.dots {
+  margin-top: 40px;
+  display: flex;
+  width: 51px;
+  justify-content: space-between;
+}
+.dot {
+  cursor: pointer;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #a9afb3;
+}
+.dot.active {
+  background-color: #a9afb3;
+  border: 1px solid #a9afb3;
+}
+
+.discover {
+  width: 100%;
+  min-height: 200px;
+  background-color: #282f35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+}
+.discover a {
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 2.8px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 21px 56px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.discover a::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  opacity: 0;
+  transition: 0.2s;
+}
+.discover a:hover:before {
+  opacity: 1;
+  left: 83%;
+}
+.discover a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  padding: 21px 70px 21px 42px;
+}
+
+.gallery {
+  width: 100%;
+  height: 534px;
+  background-image: url(../img/8-layers.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 469px;
+}
+
+.contact p {
+  margin-top: 40px;
+  margin-bottom: 35px;
+  color: #848789;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: normal;
+  line-height: 34px;
+  text-align: center;
+}
+.send {
+  display: flex;
+}
+
+.send-area {
+  width: 400px;
+  height: 69px;
+  border: 1px solid #d3d7d9;
+  background-color: #ffffff;
+  color: #929292;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: normal;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.send-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 126px;
+  height: 69px;
+  background-color: #64c29e;
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.send-btn:hover {
+  background-color: #4ca784;
+}
+
+.footer{
+  padding: 15px 20px;
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.social{
+  display: flex;
+  width: 200px;
+  justify-content: space-evenly;
+}
+.social a{
+  transition: .14s;
+}
+.social a:hover{
+  scale: 1.1;
+}
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+@media only screen and (max-width: 600px) {
+  .rHeader .rNav img {
+    width: 54px;
+    height: auto;
+  }
+  .rHeader .rNav a,
+  .rHeader .rNav p {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+  .rMain {
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+  .company-img {
+    height: 300px;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .twitter p {
+    font-size: 18px;
+  }
+
+  .rHeader {
+    display: flex;
+    align-items: center;
+  }
+  .rHeader:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .rNav {
+    min-height: 85px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .rNav p {
+    display: none;
+  }
+  .rHeader .rNav a,
+  .rHeader .rNav p {
+    font-size: 32px;
+    color: white;
+    padding: 15px 0;
+  }
+  .rHeader .rNav img {
+    width: 108px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 556px){
+  .send-area{
+    width: 200px;
+    height: 39px;
+    font-size: 15px;
+  }
+  .send-btn{
+    width: 86px;
+    height: 39px;
+  }
+}
