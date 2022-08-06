@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
 :root {
   --width: 350px;
   --height: 50px;
@@ -449,7 +450,7 @@ body {
   background-color: #4ca784;
 }
 
-.footer{
+.footer {
   padding: 15px 20px;
   width: 100%;
   min-height: 250px;
@@ -457,16 +458,37 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-.social{
+.footer img{
+  cursor: pointer;
+  pointer-events: none;
+}
+.social {
   display: flex;
   width: 200px;
   justify-content: space-evenly;
 }
-.social a{
-  transition: .14s;
+.social a {
+  transition: 0.14s;
 }
-.social a:hover{
-  scale: 1.1;
+.social a img{
+  opacity: 0.5;
+}
+.social a:hover {
+  scale: 1.06;
+}
+.footer p {
+  color: #848789;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: normal;
+  line-height: 17.87px;
+}
+.footer p span{
+  font-family: 'Inspiration';
+  font-size: 32px;
+  color: black;
+  font-weight: 600;
 }
 /* ====================================== */
 /* ====================================== */
@@ -488,7 +510,7 @@ body {
   .company-img {
     height: 300px;
   }
-  .footer{
+  .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -532,15 +554,28 @@ body {
     width: 108px;
     height: auto;
   }
+  .info-title{
+    padding: 5px 20px;
+  }
+  .info-title p{
+    font-size: 13px;
+  }
+  .rmain-container p{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .rmain-container h1{
+    font-size: 15px;
+  }
 }
 
-@media only screen and (max-width: 556px){
-  .send-area{
+@media only screen and (max-width: 556px) {
+  .send-area {
     width: 200px;
     height: 39px;
     font-size: 15px;
   }
-  .send-btn{
+  .send-btn {
     width: 86px;
     height: 39px;
   }
